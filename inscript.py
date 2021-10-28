@@ -15,7 +15,7 @@ def zsh_install():
     cmd = 'apt'
     argument = 'install'
     
-    sub_proc = subprocess.run([sudo, cmd, argument, package], shell=False)
+    subprocess.run([sudo, cmd, argument, package], shell=False)
     
     subprocess.run(['chsh', '-s', '$(which zsh)'])
 
